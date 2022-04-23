@@ -1,0 +1,30 @@
+weight = 41.5
+price_per_pound = 0
+price_per_pound_drone = 0 
+
+# Ground Shipping
+if weight <= 2.0:
+  price_per_pound = 1.50
+elif 2.0 < weight <= 6.0:
+  price_per_pound = 3.00
+elif 6.0 < weight <= 10.0:
+  price_per_pound = 4.00
+else: 
+  price_per_pound = 4.75
+print("Ground Shipping: $ " + str(price_per_pound * weight + 20.00))
+
+# Premium Ground Shipping
+cost_of_pemium_shipment = 125.00
+print("Cost of Premium Shipment: $ " + str(cost_of_pemium_shipment))
+
+# Drone Shipping
+
+if weight <= 2.0:
+  price_per_pound_drone = 4.50
+elif 2.0 < weight <= 6.0:
+  price_per_pound_drone = 9.00
+elif 6.0 < weight <= 10.0:
+  price_per_pound_drone = 12.00
+else: 
+  price_per_pound_drone = 14.25
+print ("Drone Shipping: $ " + str(price_per_pound_drone * weight ))
